@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="fileStructure" namespace="/path/fileStructure" extends="path-default">
+
+		<action name="DynamicFileEditorsAction_*" class="dynamicFileEditorsAction" method="{1}">
+			<result name="DynamicFileEditor">/WEB-INF/pages/imco/dynamicfiles/DynamicFileEditor.jsp</result>
+			<result name="tagExpressions">/WEB-INF/pages/imco/dynamicfiles/XMLTagExpressionsMaint.jsp</result>
+			<result name="xmlTagDialog">/WEB-INF/pages/imco/dynamicfiles/XMLTagDialog.jsp</result>
+			<result name="xmlEditor">/WEB-INF/pages/imco/dynamicfiles/XmlEditor.jsp</result>
+			<result name="textTagDialog">/WEB-INF/pages/imco/dynamicfiles/TextTagDialog.jsp</result>
+			
+			<interceptor-ref name="fileUpload"></interceptor-ref>
+			<interceptor-ref name="pathDefaultStack" />
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="successUpload" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">scriptStream</param>
+			</result>
+		</action>
+
+		<action name="DynamicFileStructureMaintAction_*" class="dynamicFileStructureMaintAction" method="{1}">
+			<result name="dynamicStructureFileMaint">/WEB-INF/pages/imco/dynamicfiles/DynamicFileStructureMaint.jsp</result>
+			<result name="openMultiMappingDialog">/WEB-INF/pages/imco/pws/MultiMapping.jsp</result>
+			<result name="dynamicFileStructureList">/WEB-INF/pages/imco/dynamicfiles/DynamicFileStructureList.jsp</result>
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+
+		<action name="DynamicFileStructureListAction_*" class="dynamicFileStructureListAction" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<action name="PWSWebMappingExplorerList_*" class="pwsMappingServiceExplorerList" method="{1}">
+			<result name="loadPWSGridSection">/WEB-INF/pages/imco/pws/PWSMappingServiceExplorerList.jsp</result>
+			<result name="loadPWSSubGrid">/WEB-INF/pages/imco/pws/PWSMappingServiceExplorerSubGridList.jsp</result>
+				<result name="success" type="json">
+					<param name="ignoreHierarchy">false</param>
+				</result>
+		</action>
+	</package>
+</struts>

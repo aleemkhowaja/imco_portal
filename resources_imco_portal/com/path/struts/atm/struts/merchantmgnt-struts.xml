@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+         <!-- @author: jihanemazloum 2013 -->
+<struts>
+	<package name="merchantposmgnt" namespace="/path/merchantposmgnt" extends="path-default">
+	
+		<!-- used for maint form -->
+		<action name="MerchantMgntMaint_*" class="merchantMgntMaintAction" method="{1}">
+			<!--result name="success">/WEB-INF/pages/core/merchantposmgnt/MerchantMgntList.jsp</result-->
+			
+			<result name="loadMerchantMgntPage">/WEB-INF/pages/atm/merchantposmgnt/MerchantMgntList.jsp</result>
+			<result name="loadMerchantMgntMaintPage">/WEB-INF/pages/atm/merchantposmgnt/MerchantMgntMaint.jsp</result>			
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="alert_success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<!-- used for grid -->
+		<action name="merchantMgntList_*" class="merchantMgntListAction" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action> 
+		
+		<!-- used for status button -->
+		<action name="MerchantMgntStatus_*" class="MerchantMgntStatusAction" method="{1}">
+		    <result name="loadGrid" type="json">
+		      <param name="ignoreHierarchy">false</param>
+		    </result>
+		</action>
+		
+		
+		<!-- Fatima -->
+			<!-- used for grid -->
+		<action name="merchantPosMgntList_*" class="merchantPosMgntListAction" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action> 
+
+		<!-- used for maint form -->
+		<action name="MerchantPosMgntMaint_*" class="merchantPosMgntMaintAction" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+				<result name="alert_success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="loadMerchantPosMgntPage">/WEB-INF/pages/atm/merchantposmgnt/MerchantPosMgntList.jsp</result>
+			<result name="loadMerchantPosMgntMaintPage">/WEB-INF/pages/atm/merchantposmgnt/MerchantPosMgntMaint.jsp</result>
+		</action>
+		
+		<action name="merchantPosMgntStatusAction_*" class="merchantPosMgntStatusAction" method="{1}">
+			<result name="loadGrid" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>
+

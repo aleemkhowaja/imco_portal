@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="newApi" namespace="/path/newApi" extends="path-default">
+		<action name="NewApiListAction_*" class="newApiListAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+		<action name="NewApiMaintAction_*" class="newApiMaintAction" method="{1}">
+				<result name="newApiList">/WEB-INF/pages/imco/newapi/NewApiList.jsp</result>
+				<result name="apiMaint">/WEB-INF/pages/imco/newapi/NewApiMaint.jsp</result>
+				<result name="success" type="json"> 
+     <param name="ignoreHierarchy">false</param> 
+    </result>
+		</action>
+		<action name="NewApiDependencyAction_*" class="newApiDependencyAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+
+	</package>
+</struts>

@@ -1,0 +1,84 @@
+<CONSOLIDATED_LIST dateGenerated="2012-10-18T00:00:00">
+   <INDIVIDUALS>
+      <INDIVIDUAL>
+         <DATAID>111345</DATAID>
+         <VERSIONNUM>14</VERSIONNUM>
+         <FIRST_NAME>MOUSTAFA</FIRST_NAME>
+         <SECOND_NAME>ABBES</SECOND_NAME>
+         <UN_LIST_TYPE>Al-Qaida</UN_LIST_TYPE>
+         <REFERENCE_NUMBER>QI.A.163.04.</REFERENCE_NUMBER>
+         <LISTED_ON>2004-03-17T00:00:00</LISTED_ON>
+         <NAME_ORIGINAL_SCRIPT>مصطفى عباس</NAME_ORIGINAL_SCRIPT>
+         <COMMENTS1>Brother of Youcef Abbes (QI.A.166.04). Review pursuant to Security Council resolution 1822 (2008) was concluded on 28 Sep. 2009.</COMMENTS1>
+         <NATIONALITY>
+            <VALUE>Algerian</VALUE>
+         </NATIONALITY>
+         <LIST_TYPE>
+            <VALUE>UN List</VALUE>
+         </LIST_TYPE>
+         <LAST_DAY_UPDATED>
+            <VALUE>2004-11-26T00:00:00</VALUE>
+            <VALUE>2007-12-21T00:00:00</VALUE>
+            <VALUE>2008-12-02T00:00:00</VALUE>
+            <VALUE>2010-01-25T00:00:00</VALUE>
+            <VALUE>2011-05-16T00:00:00</VALUE>
+         </LAST_DAY_UPDATED>
+         <INDIVIDUAL_ALIAS>
+            <QUALITY>Good</QUALITY>
+            <ALIAS_NAME>Mostafa Abbes</ALIAS_NAME>
+         </INDIVIDUAL_ALIAS>
+         <INDIVIDUAL_ALIAS>
+            <QUALITY>Good</QUALITY>
+            <ALIAS_NAME>Mostafa Abbas born in France on 5 Feb. 1962</ALIAS_NAME>
+         </INDIVIDUAL_ALIAS>
+         <INDIVIDUAL_ALIAS>
+            <QUALITY>Good</QUALITY>
+            <ALIAS_NAME>Mustafa Abbas</ALIAS_NAME>
+         </INDIVIDUAL_ALIAS>
+         <INDIVIDUAL_ALIAS>
+            <QUALITY>Good</QUALITY>
+            <ALIAS_NAME>Moustapha Abbes</ALIAS_NAME>
+         </INDIVIDUAL_ALIAS>
+         <INDIVIDUAL_ADDRESS>
+            <COUNTRY>Algeria</COUNTRY>
+         </INDIVIDUAL_ADDRESS>
+         <INDIVIDUAL_DATE_OF_BIRTH>
+            <TYPE_OF_DATE>Exact</TYPE_OF_DATE>
+            <DATE>1962-02-05T00:00:00</DATE>
+         </INDIVIDUAL_DATE_OF_BIRTH>
+         <INDIVIDUAL_PLACE_OF_BIRTH>
+            <CITY>Osniers</CITY>
+            <COUNTRY>Algeria</COUNTRY>
+         </INDIVIDUAL_PLACE_OF_BIRTH>
+         <INDIVIDUAL_DOCUMENT/>
+         <SORT_KEY>ABBES MOUSTAFA</SORT_KEY>
+         <SORT_KEY_LAST_MOD>2011-05-16T00:00:00</SORT_KEY_LAST_MOD>
+      </INDIVIDUAL>
+	</INDIVIDUALS>
+	<ENTITIES>
+      <ENTITY>
+         <DATAID>113445</DATAID>
+         <VERSIONNUM>10</VERSIONNUM>
+         <FIRST_NAME>ABU SAYYAF GROUP</FIRST_NAME>
+         <UN_LIST_TYPE>Al-Qaida</UN_LIST_TYPE>
+         <REFERENCE_NUMBER>QE.A.1.01.</REFERENCE_NUMBER>
+         <LISTED_ON>2001-10-06T00:00:00</LISTED_ON>
+         <COMMENTS1>Associated with Jemaah Islamiyah (JI) (QE.J.92.02). Current leader is Radulan Sahiron (QI.S.208.05). Review pursuant to Security Council resolution 1822 (2008) was concluded on 21 Jun. 2010.</COMMENTS1>
+         <LIST_TYPE>
+            <VALUE>UN List</VALUE>
+         </LIST_TYPE>
+         <LAST_DAY_UPDATED>
+            <VALUE>2011-12-13T00:00:00</VALUE>
+         </LAST_DAY_UPDATED>
+         <ENTITY_ALIAS>
+            <QUALITY>a.k.a.</QUALITY>
+            <ALIAS_NAME>Al Harakat Al Islamiyya</ALIAS_NAME>
+         </ENTITY_ALIAS>
+         <ENTITY_ADDRESS>
+            <COUNTRY>Philippines</COUNTRY>
+         </ENTITY_ADDRESS>
+         <SORT_KEY>ABUSAYYAFGROUP</SORT_KEY>
+         <SORT_KEY_LAST_MOD>2011-12-13T00:00:00</SORT_KEY_LAST_MOD>
+      </ENTITY>
+	</ENTITIES>
+</CONSOLIDATED_LIST>

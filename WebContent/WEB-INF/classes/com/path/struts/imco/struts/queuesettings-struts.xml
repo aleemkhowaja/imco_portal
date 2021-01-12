@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="queueSettings" namespace="/path/queueSettings" extends="path-default">
+		<action name="QueueSettingsListAction_*" class="queueSettingsListAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+		<action name="QueueSettingsMaintAction_*" class="queueSettingsMaintAction" method="{1}">
+				<result name="queueSettingsList">/WEB-INF/pages/imco/queuesettings/QueueSettingsMaint.jsp</result>
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+
+	</package>
+</struts>

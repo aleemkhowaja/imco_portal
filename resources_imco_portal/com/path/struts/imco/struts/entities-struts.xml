@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="entities" namespace="/path/entities" extends="path-default">
+		<action name="EntitiesListAction_*" class="entitiesListAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+		<action name="EntitiesMaintAction_*" class="entitiesMaintAction" method="{1}">
+				<result name="entitiesList">/WEB-INF/pages/imco/entities/EntitiesList.jsp</result>
+<!-- 				<result name="success">/WEB-INF/pages/imco/entities/EntitiesMaint.jsp</result> -->
+<result name="entityMaint">/WEB-INF/pages/imco/entities/EntitiesMaint.jsp</result>
+<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+
+	</package>
+</struts>

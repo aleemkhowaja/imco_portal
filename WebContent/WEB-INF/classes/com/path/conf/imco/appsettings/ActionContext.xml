@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="appSetListAction" class="com.path.imco.actions.appsettings.AppSetListAction" scope="prototype" parent="baseAction">
+	 <property name="appSetBO" ref="appSetBO"></property>
+	</bean>
+	<bean id="appSetMaintAction" class="com.path.imco.actions.appsettings.AppSetMaintAction" scope="prototype" parent="baseAction">
+	 <property name="appSetBO" ref="appSetBO"></property>
+	</bean>
+
+
+</beans>

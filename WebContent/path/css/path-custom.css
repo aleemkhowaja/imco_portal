@@ -1,0 +1,22 @@
+.m-div{
+	float:left;
+}
+.m-container{
+	padding-top: 15px;
+}
+.m-header{
+	float:left;
+	width:100%;
+	border-bottom: 1px solid #d2d6de;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left:40px;
+}
+.m-footer {
+    background: #fff;
+    padding: 15px;
+    color: #444;
+    border-top: 1px solid #d2d6de;
+	width:100%;
+}
+

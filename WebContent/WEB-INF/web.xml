@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  
+	<display-name>iMAL IMCO Portal</display-name>
+	
+	<servlet>
+      <servlet-name>JspSupportServlet</servlet-name>
+      <servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+      
+    </servlet>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+	      classpath:com/path/imco/applicationContext.xml
+		</param-value>
+	</context-param>
+	<!-- used to listed for session Time Out -->
+	<listener>
+		<listener-class>com.path.bo.security.CustomSessionListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<filter>
+  		 <filter-name>encodingFilter</filter-name>
+  		 <filter-class>com.path.lib.common.filter.EncodingFilter</filter-class>
+  		 <async-supported>true</async-supported>
+    </filter>
+	<!-- Spring Security Filter should come before that of Struts2 -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	
+	<!-- struts-prepare and struts-execute filters are used for taglibs instead of StrutsPrepareAndExecuteFilter -->
+	
+	<filter>
+  		<filter-name>struts-prepare</filter-name>
+  		 <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareFilter</filter-class>
+    </filter>
+    
+    	<!-- is used for layout decoration -->
+	
+	<filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+    </filter>
+    
+    <filter>
+  		<filter-name>struts-execute</filter-name>
+  		<filter-class>org.apache.struts2.dispatcher.filter.StrutsExecuteFilter</filter-class>
+    </filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>struts-prepare</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+        <filter-name>sitemesh</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+	
+	<filter-mapping>
+		<filter-name>struts-execute</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>/path/PreMain.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+            <error-code>404</error-code>
+            <location>/WEB-INF/pages/common/ErrorPageRedirect.jsp</location>
+      </error-page>
+	
+</web-app>

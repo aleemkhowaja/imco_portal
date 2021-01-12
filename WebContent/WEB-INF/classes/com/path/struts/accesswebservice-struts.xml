@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="accessWebService" namespace="/path/accessWebService" extends="path-default">
+		<action name="AccessWebServiceListAction_*" class="accessWebServiceListAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+		<action name="AccessWebServiceMaintAction_*" class="accessWebServiceMaintAction" method="{1}">
+				<result name="accessWebServiceList">/WEB-INF/pages/imco/accesswebservice/AccessWebServiceList.jsp</result>
+				<result name="accessWebServiceMaint">/WEB-INF/pages/imco/accesswebservice/AccessWebServiceMaint.jsp</result>
+				<result name="success" type="json">
+					<param name="ignoreHierarchy">false</param>
+				</result>
+				<result name="error" type="json">
+					<param name="ignoreHierarchy">false</param>
+				</result>
+		</action>
+		<action name="WebServiceExplorerTree_*" class="webServiceExplorerTree" method="{1}">	
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="AccessWebServiceExplorerList_*" class="accessWebServiceExplorerList" method="{1}">
+			<result name="loadAccessWebserviceExplorerGrid">/WEB-INF/pages/imco/accesswebservice/AccessWebServiceExplorerList.jsp</result>
+			<result name="loadAccessWebserviceExplorerSubGrid">/WEB-INF/pages/imco/accesswebservice/AccessWebServiceExplorerSubGridList.jsp</result>
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="WebServiceExplorerMaint_*" class="webServiceExplorerMaint" method="{1}">	
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="loadGridSection">/WEB-INF/pages/imco/accesswebservice/WebServiceExplorerList.jsp</result>
+		</action>
+		
+		<action name="AccessWebServiceStatusList_*" class="accessWebServiceStatusList" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="integrationSettings" namespace="/path/integrationSettings" extends="path-default">
+	
+		<action name="IntegrationSettingsListAction_*" class="integrationSettingsListAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+		<action name="IntegrationSettingsMaintAction_*" class="integrationSettingsMaintAction" method="{1}">
+				<result name="integrationSettingsList">/WEB-INF/pages/imco/integrationsettings/IntegrationSettingsList.jsp</result>
+				<result name="integrationSettingsMaint">/WEB-INF/pages/imco/integrationsettings/IntegrationSettingsMaint.jsp</result>
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+			<action name="SyncBranchLookupAction_*" class="syncBranchLookupAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+			<action name="IntegrationEventMgmtAction_*" class="integrationEventMgmtAction" method="{1}">
+				<result name="success" type="json"> 
+					<param name="ignoreHierarchy">false</param> 
+				</result>
+		</action>
+
+	</package>
+</struts>

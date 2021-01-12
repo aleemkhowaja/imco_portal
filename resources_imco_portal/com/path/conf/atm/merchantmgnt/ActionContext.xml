@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ <!-- @author: jihanemazloum 2013 -->
+ 
+	<bean id="merchantMgntMaintAction" class="com.path.atm.actions.merchantposmgnt.merchantmgnt.MerchantMgntMaintAction" scope="prototype" parent="retailBaseAction">
+		<property name="merchantMgntBO" ref="merchantMgntBO"></property>
+	</bean>
+
+	<!-- used for grid -->
+	<bean id="merchantMgntListAction" class="com.path.atm.actions.merchantposmgnt.merchantmgnt.MerchantMgntListAction" scope="prototype" parent="baseAction">
+		<property name="merchantMgntBO" ref="merchantMgntBO"></property>  
+	</bean>
+	
+	<!-- used for status button  -->
+	<bean id="MerchantMgntStatusAction" class="com.path.atm.actions.merchantposmgnt.merchantmgnt.MerchantMgntStatusAction"
+		scope="prototype" parent="baseAction">
+	</bean>
+
+
+	<!-- used for grid -->
+	<bean id="merchantPosMgntListAction" class="com.path.atm.actions.merchantposmgnt.posmgnt.MerchantPosMgntListAction" scope="prototype" parent="baseAction">
+		<property name="merchantPosMgntBO" ref="merchantPosMgntBO"></property>
+	</bean>
+	
+	<bean id="merchantPosMgntMaintAction" class="com.path.atm.actions.merchantposmgnt.posmgnt.MerchantPosMgntMaintAction" scope="prototype" parent="retailBaseAction">
+		<property name="merchantPosMgntBO" ref="merchantPosMgntBO"></property>
+		<property name="alertsBO" ref="alertsBO"></property>
+	</bean>
+	
+	<bean id="merchantPosMgntStatusAction" class="com.path.atm.actions.merchantposmgnt.posmgnt.MerchantPosMgntStatusAction" 
+		scope="prototype" parent="baseAction">
+	</bean>
+
+</beans>

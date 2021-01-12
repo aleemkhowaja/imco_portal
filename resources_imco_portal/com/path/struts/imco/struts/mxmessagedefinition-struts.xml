@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="mxmessagedefinition" namespace="/path/mxmessagedefinition" extends="path-default">
+
+		<action name="MxMessageDefinitionEditorsAction_*" class="mxMessageDefinitionEditorsAction" method="{1}">
+			<result name="DynamicFileEditor">/WEB-INF/pages/imco/mxmessagedefinition/DynamicFileEditor.jsp</result>
+			<result name="tagExpressions">/WEB-INF/pages/imco/mxmessagedefinition/XMLTagExpressionsMaint.jsp</result>
+			<result name="xmlTagDialog">/WEB-INF/pages/imco/mxmessagedefinition/XMLTagDialog.jsp</result>
+			<result name="xmlEditor">/WEB-INF/pages/imco/mxmessagedefinition/XmlEditor.jsp</result>
+			<result name="textTagDialog">/WEB-INF/pages/imco/mxmessagedefinition/TextTagDialog.jsp</result>
+			
+			<interceptor-ref name="fileUpload"></interceptor-ref>
+			<interceptor-ref name="pathDefaultStack" />
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="successUpload" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">scriptStream</param>
+			</result>
+		</action>
+
+		<action name="MxMessageDefinitionMaintAction_*" class="mxMessageDefinitionMaintAction" method="{1}">
+			<result name="mxMessageDefinitionMaint">/WEB-INF/pages/imco/mxmessagedefinition/MxMessageDefinitionMaint.jsp</result>
+			<result name="mxMessageDefinitionList">/WEB-INF/pages/imco/mxmessagedefinition/MxMessageDefinitionList.jsp</result>
+			<result name="childRowGrid">/WEB-INF/pages/imco/mxmessagedefinition/childGrid.jsp</result>
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			
+			<interceptor-ref name="fileUpload"></interceptor-ref>
+			<interceptor-ref name="pathDefaultStack" />
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="successUpload" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">scriptStream</param>
+			</result>
+			
+		</action>
+
+		<action name="MxMessageDefinitionListAction_*" class="mxMessageDefinitionListAction" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<action name="MxMessageDefinitionStatusAction_*" class="mxMessageDefinitionStatusAction" method="{1}">
+			<result name="success" type="json"> 
+				<param name="ignoreHierarchy">false</param> 
+			</result>
+		</action>
+
+	</package>
+</struts>

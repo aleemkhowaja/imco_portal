@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+ 	.jqte_editor, .jqte_source 
+ 	{
+ 		white-space: pre-wrap;
+ 	}
+ 	
+ 	.highlighter-button
+ 	{
+ 		background-color: #dfeffc;
+ 	}
+ 	
+ 	.jqte
+ 	{
+ 		margin: 0px 0;
+ 		height: 400px;
+ 		border: #d0e5f5;
+ 	}
+ 	 	
+ 	.header-mark
+ 	{
+ 		    background-color: #8ccaee;
+ 	}
+ 	
+ 	.jqte_editor 
+ 	{
+ 		height:  420px;
+ 	}

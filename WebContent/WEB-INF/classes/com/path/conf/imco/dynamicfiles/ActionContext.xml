@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="dynamicFileStructureListAction" class="com.path.imco.actions.dynamicfiles.DynamicFileStructureListAction" scope="prototype" parent="baseAction">
+		<property name="dynamicFileStructureBO" ref="dynamicFileStructureBO"></property>
+	</bean>
+	
+	<bean id="dynamicFileStructureMaintAction" class="com.path.imco.actions.dynamicfiles.DynamicFileStructureMaintAction" scope="prototype" parent="baseAction">
+		<property name="dynamicFileStructureBO" ref="dynamicFileStructureBO"></property>
+	</bean>
+	
+	<bean id="dynamicFileEditorsAction" class="com.path.imco.actions.dynamicfiles.DynamicFileEditorsAction" scope="prototype" parent="baseAction">
+		<property name="imcoCommonLookupBO" ref="imcoCommonLookupBO"></property>
+	</bean>
+	
+	<bean id="pwsMappingServiceExplorerList" class="com.path.imco.actions.dynamicfiles.PwsMappingServiceExplorerList" scope="prototype" parent="baseAction">
+		<property name="webServiceExplorerBO" ref="webServiceExplorerBO"></property>
+	</bean>
+	
+</beans>

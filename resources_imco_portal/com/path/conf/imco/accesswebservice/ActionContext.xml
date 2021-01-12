@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- 	<bean id="accessWebServiceListAction" class="com.path.imco.actions.accesswebservice.AccessWebServiceListAction" scope="prototype" parent="baseAction">
+	 <property name="accessWebServiceBO" ref="accessWebServiceBO"></property>
+	</bean>
+	<bean id="accessWebServiceMaintAction" class="com.path.imco.actions.accesswebservice.AccessWebServiceMaintAction" scope="prototype" parent="baseAction">
+	 <property name="accessWebServiceBO" ref="accessWebServiceBO"></property>
+	</bean>
+ 	<bean id="accessWebServiceExplorerList" class="com.path.imco.actions.accesswebservice.AccessWebServiceExplorerList" scope="prototype" parent="WebServiceExplorerGridBaseList">
+ 	</bean>
+ 	<bean id="accessWebServiceStatusList" class="com.path.imco.actions.accesswebservice.AccessWebServiceStatusList" scope="prototype" parent="baseAction">
+ 	</bean> -->
+ 	
+</beans>

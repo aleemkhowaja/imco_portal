@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- User Story #740995 PWS generation From DB Procedure screen -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="pwsGenerationMaint" class="com.path.imco.actions.pwsgeneration.PWSGenerationMaint" scope="prototype" parent="baseAction">
+		<property name="pwsGenerationBO" ref="pwsGenerationBO"></property>
+	</bean>
+
+	<bean id="pwsGenerationBPELList" class="com.path.imco.actions.pwsgeneration.PWSGenerationBPELList" scope="prototype">
+
+	</bean>
+	
+	<bean id="pwsGenerationLookup" class="com.path.imco.actions.pwsgeneration.PWSGenerationLookup" scope="prototype" parent="baseAction">
+			<property name="pwsGenerationBO" ref="pwsGenerationBO"></property>
+	</bean>
+	
+	<bean id="pwsGenerationProcParamList" class="com.path.imco.actions.pwsgeneration.PWSGenerationProcParamList" scope="prototype">
+			<property name="pwsGenerationBO" ref="pwsGenerationBO"></property>
+	</bean>
+	
+	<bean id="pwsGenerationAdaptersList" class="com.path.imco.actions.pwsgeneration.PWSGenerationAdaptersList" scope="prototype" parent="baseAction">
+			<property name="pwsGenerationBO" ref="pwsGenerationBO"></property>
+	</bean>
+	
+	<bean id="pwsGenerationDependencyAction" class="com.path.imco.actions.pwsgeneration.PWSGenerationDependencyAction" scope="prototype">
+		<property name="webServiceExplorerBO" ref="webServiceExplorerBO"> </property>
+	</bean>
+	
+	<bean id="pwsGenerationStatus" class="com.path.imco.actions.pwsgeneration.PWSGenerationStatus" scope="prototype" parent="baseAction">
+	
+	</bean>
+	<!-- 740998 - PWS generation From BPEL(applying common files instead of local) -->
+	<bean id="pwsWebServiceExplorerList" class="com.path.imco.actions.pwsgeneration.pwsgenerationwebserviceexplorer.PWSWebServiceExplorerList" scope="prototype" parent="baseAction">
+			<property name="webServiceExplorerBO" ref="webServiceExplorerBO"> </property>
+	</bean>
+	<!-- 740998 - PWS generation From BPEL(applying common files instead of local) -->
+	
+</beans>

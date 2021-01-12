@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- User Story #740995 PWS generation From DB Procedure -screen -->
+
+<struts>
+	<package name="pwsgeneration" namespace="/path/PWSGeneration"
+		extends="path-default">
+
+		<action name="PWSGenerationMaint_*" class="pwsGenerationMaint"
+			method="{1}">
+			<result name="loadMaintAction">/WEB-INF/pages/imco/pwsgeneration/PWSGenerationMaint.jsp
+			</result>
+			<result name="loadAdaptersList">/WEB-INF/pages/imco/pwsgeneration/PWSGenerationAdaptersList.jsp
+			</result>
+			<result name="loadPWSGenerationAPI">/WEB-INF/pages/imco/pwsgeneration/PWSGenerationAPI.jsp
+			</result>
+			<result name="loadPWSFileDemo">/WEB-INF/pages/imco/pwsgeneration/PWSFileDemo.jsp
+			</result>
+			<result name="loadPWSWSDLGeneration">/WEB-INF/pages/imco/pwsgeneration/PWSWsdlGeneration.jsp
+			</result>
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="jsonError" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>	
+		
+		<action name="bpelImport_*" class="pwsGenerationMaint" method="{1}">
+			<interceptor-ref name="fileUpload"></interceptor-ref>
+			<interceptor-ref name="pathDefaultStack"></interceptor-ref>
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="successUpload" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">scriptStream</param>
+			</result>
+		</action>
+
+		<action name="PWSGenerationAPIList_*" class="pwsGenerationAPIList"
+			method="{1}">
+			<!-- 
+			<result name="loadApiList">/WEB-INF/pages/imco/pwsgeneration/PWSGenerationAPIList.jsp
+			</result>
+			-->
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<action name="PWSGenerationProcParamList_*" class="pwsGenerationProcParamList"
+			method="{1}">
+			
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<action name="PWSGenerationLookup_*" class="pwsGenerationLookup" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<action name="PWSGenerationAdaptersList_*" class="pwsGenerationAdaptersList" method="{1}">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		
+		<action name="PWSGenerationStatus_*" class="pwsGenerationStatus" method="{1}">
+		    <result name="loadGrid" type="json">
+		      <param name="ignoreHierarchy">false</param>
+		    </result>
+		</action>
+		
+		<action name="PWSGenerationDependencyAction_*" class="pwsGenerationDependencyAction" method="{1}">
+			 <result name="loadPWSGenerationTreeAndGrid">/WEB-INF/pages/imco/pwsgeneration/pwsgenerationwebserviceexplorer/PwsWebServiceExplorerServicesParamsOperations.jsp</result>
+			 <result name="loadGrid" type="json">
+		      <param name="ignoreHierarchy">false</param>
+		    </result>
+		</action>
+		
+		<!-- 740998 - PWS generation From BPEL(applying common files instead of local) -->
+		<action name="PWSWebServiceExplorerList_*" class="pwsWebServiceExplorerList" method="{1}">
+			<result name="loadPWSGenerationWebserviceExplorer">/WEB-INF/pages/imco/pwsgeneration/pwsgenerationwebserviceexplorer/PWSWebServiceExplorerList.jsp</result>
+			<result name="loadPWSGenerationWebserviceExplorerSub">/WEB-INF/pages/imco/pwsgeneration/pwsgenerationwebserviceexplorer/PWSWebServiceExplorerSubGridList.jsp</result>
+				<result name="success" type="json">
+					<param name="ignoreHierarchy">false</param>
+				</result>
+		</action>
+		<!-- 740998 - PWS generation From BPEL(applying common files instead of local) -->
+
+	</package>
+</struts>
